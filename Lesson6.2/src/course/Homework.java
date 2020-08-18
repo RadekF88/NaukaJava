@@ -7,7 +7,7 @@ public class Homework {
 		int shampooDeficit = 200;		// Mililiters
 		int soapDeficit = 80;			// Grams
 		
-		int detergentExpected = 1000;	// Grams
+		int detergentExpected = 1000;		// Grams
 		int shampooExpected = 500;		// Mililiters
 		int soapExpected = 400;			// Grams
 		
