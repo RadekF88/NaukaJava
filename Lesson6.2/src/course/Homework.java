@@ -3,49 +3,77 @@ package course;
 public class Homework {
 
 	public static void main(String[] args) {
-		int detergent = 150;	// Grams
-		int shampoo = 200;		// Mililiters
-		int soap = 80;			// Grams
+		int detergentDeficit = 100;		// Grams
+		int shampooDeficit = 200;		// Mililiters
+		int soapDeficit = 80;			// Grams
 		
 		int detergentExpected = 1000;	// Grams
 		int shampooExpected = 500;		// Mililiters
-		int soapExpected = 100;			// Grams
+		int soapExpected = 400;			// Grams
 		
-		boolean holidays = true;
+		boolean holidays = true ;
 		
-		if (detergent < detergentExpected) {
-			int shortage = detergentExpected - detergent;
-			System.out.println("You need to buy " + shortage + " grams of detergent.");
+		if (holidays && detergentDeficit > 0) {
+			int shortage = (detergentExpected / 2) - detergentDeficit;
+			System.out.println("You have " + shortage + " grams of detergent.");
+		}
+		else if (holidays && detergentDeficit == 0) {
+			int shortage = (detergentExpected / 2) - detergentDeficit;
+			System.out.println("You have " + shortage + " grams of detergent.");
+		}
+		else if (!holidays && detergentDeficit > 0) {
+			int shortage = detergentExpected - detergentDeficit;
+			System.out.println("You have " + shortage + " grams of detergent.");
+		}
+		else if (!holidays && detergentDeficit == 0) {
+			int shortage = detergentExpected - detergentDeficit;
+			System.out.println("You have " + shortage + " grams of detergent.");
 		}
 		else {
-			System.out.println("You have enough detergent!");
+			System.out.println("Error!");
 		}
 		
-		
-		if (holidays && shampoo < shampooExpected / 2) {
-			int shortage = (shampooExpected / 2) - shampoo;
-			System.out.println("You need to buy " + shortage + " mililiters of shampoo.");
+		if (holidays && shampooDeficit > 0) {
+			int shortage = (shampooExpected / 2) - shampooDeficit;
+			System.out.println("You have " + shortage + " mililiters of shampoo.");
 		}
-		else if (!holidays && shampoo < shampooExpected) {
-			int shortage = shampooExpected - shampoo;
-			System.out.println("You need to buy " + shortage + " mililiters of shampoo.");
+		else if (holidays && shampooDeficit == 0) {
+			int shortage = (shampooExpected / 2) - shampooDeficit;
+			System.out.println("You have " + shortage + " mililiters of shampoo.");
+		}
+		else if (!holidays && shampooDeficit > 0) {
+			int shortage = shampooExpected - shampooDeficit;
+			System.out.println("You have " + shortage + " mililiters of shampoo.");
+		}
+		else if (!holidays && shampooDeficit == 0) {
+			int shortage = shampooExpected - shampooDeficit;
+			System.out.println("You have " + shortage + " mililiters of shampoo.");
 		}
 		else {
-			System.out.println("You have enough shampoo!");
+			System.out.println("Error!");
 		}
 		
-		
-		if (holidays & soap < soapExpected / 2) {
-			int shortage = (soapExpected / 2) - soap;
-			System.out.println("You need to buy " + shortage + " grams of soap.");
+		if (holidays && soapDeficit > 0) {
+			int shortage = (soapExpected / 2) - soapDeficit;
+			System.out.println("You have " + shortage + " grams of soap.");
 		}
-		else if (!holidays && soap < soapExpected) {
-			int shortage = soapExpected - soap;
-			System.out.println("You need to buy " + shortage + " grams of soap.");
+		else if (holidays && soapDeficit == 0) {
+			int shortage = (soapExpected / 2) - soapDeficit;
+			System.out.println("You have " + shortage + " grams of soap.");
+		}
+		else if (!holidays && soapDeficit > 0) {
+			int shortage = soapExpected - soapDeficit;
+			System.out.println("You have " + shortage + " grams of soap.");
+		}
+		else if (!holidays && soapDeficit == 0) {
+			int shortage = soapExpected - soapDeficit;
+			System.out.println("You have " + shortage + " grams of soap.");
 		}
 		else {
-			System.out.println("You have enough soap!");
+			System.out.println("Error!");
 		}
+		
+		
 		
 		
 	}
